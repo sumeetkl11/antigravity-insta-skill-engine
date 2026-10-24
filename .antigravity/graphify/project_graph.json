@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "project": "AntiGravity Insta Skill Architecture",
+  "nodes": [
+    {
+      "id": "vault_core",
+      "name": "Core AntiGravity & Vibe Prompts",
+      "file": "AntiGravity Insta Links/01_core_antigravity_links.md",
+      "type": "intelligence_vault",
+      "link_count": 10,
+      "dependencies": [
+        "state_manifest"
+      ]
+    },
+    {
+      "id": "vault_skills",
+      "name": "Extracted Skills & GitHub Repos",
+      "file": "AntiGravity Insta Links/02_skills_and_repos.md",
+      "type": "intelligence_vault",
+      "link_count": 13,
+      "dependencies": [
+        "mcp_registry",
+        "skills_folder"
+      ]
+    },
+    {
+      "id": "vault_graphify_ponytail",
+      "name": "Graphify & Ponytail Pipelines",
+      "file": "AntiGravity Insta Links/03_graphify_and_ponytail.md",
+      "type": "intelligence_vault",
+      "link_count": 16,
+      "dependencies": [
+        "graphify_engine",
+        "ponytail_router"
+      ]
+    },
+    {
+      "id": "vault_ui",
+      "name": "UI Patterns & Visual Inspo",
+      "file": "AntiGravity Insta Links/04_ui_and_feature_inspo.md",
+      "type": "intelligence_vault",
+      "link_count": 39,
+      "dependencies": [
+        "frontend_components"
+      ]
+    },
+    {
+      "id": "state_manifest",
+      "name": "State Manifest Token Engine",
+      "file": ".antigravity/state_manifest.json",
+      "type": "token_controller",
+      "dependencies": []
+    },
+    {
+      "id": "project_plot",
+      "name": "Master Project Plot",
+      "file": "docs/project_plot.md",
+      "type": "master_architecture",
+      "dependencies": [
+        "vault_core",
+        "vault_skills",
+        "vault_graphify_ponytail",
+        "vault_ui"
+      ]
+    },
+    {
+      "id": "manual_guide",
+      "name": "Manual Setup Steps",
+      "file": "docs/manual_setup_steps.md",
+      "type": "human_action_guide",
+      "dependencies": [
+        "vault_skills"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "state_manifest",
+      "to": "vault_core"
+    },
+    {
+      "from": "vault_core",
+      "to": "project_plot"
+    },
+    {
+      "from": "vault_skills",
+      "to": "project_plot"
+    },
+    {
+      "from": "vault_graphify_ponytail",
+      "to": "project_plot"
+    },
+    {
+      "from": "vault_ui",
+      "to": "project_plot"
+    },
+    {
+      "from": "vault_skills",
+      "to": "manual_guide"
+    }
+  ]
+}
