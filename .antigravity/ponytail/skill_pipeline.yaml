@@ -1,0 +1,34 @@
+ponytail_router:
+  version: "1.0"
+  engine_mode: "token_minimal_sequential"
+  description: "Sequential skill execution pipeline ensuring zero token bleed and single-skill loading."
+  execution_phases:
+    phase_0_preflight:
+      active_skill: "state_manifest_verifier"
+      action: "Load .antigravity/state_manifest.json to bypass processed URLs and cached trees."
+      unload_on_complete: true
+    phase_1_graph_query:
+      active_skill: "graphify_node_selector"
+      action: "Query .antigravity/graphify/project_graph.json to load only targeted nodes."
+      unload_on_complete: true
+    phase_2_skill_dispatch:
+      active_skill: "modular_code_scaffolder"
+      action: "Execute single focused coding task without polluting global context."
+      unload_on_complete: true
+    phase_3_post_flight:
+      active_skill: "state_manifest_updater"
+      action: "Record completed modules in manifest and clear working memory."
+      unload_on_complete: true
+  prompt_tail_rules:
+    - trigger: "architecture_or_file_change"
+      require_graphify: true
+      skill_sequence:
+        - "load_graph_node"
+        - "apply_modular_code_skill"
+        - "update_graph_edges"
+    - trigger: "new_link_or_repo"
+      require_graphify: false
+      skill_sequence:
+        - "browser_extract_metadata"
+        - "categorize_into_vault"
+        - "sync_project_plot"
