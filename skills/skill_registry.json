@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "registry_name": "AntiGravity Extracted Agent Skills",
+  "skills": [
+    {
+      "name": "antigravity-agent",
+      "type": "unified_master_orchestrator",
+      "description": "Unified Pre-Flight & Builder Skill combining Graphify (node mapping), Ponytail (clean zero-slop ladder), and 78 Instagram vibe coding practices.",
+      "config_path": "skills/antigravity-agent/SKILL.md",
+      "status": "active"
+    },
+    {
+      "name": "graphify-orchestrator",
+      "type": "context_optimizer",
+      "description": "Transforms project codebase files into dependency node maps to prevent token saturation.",
+      "config_path": ".antigravity/graphify/project_graph.json",
+      "status": "active"
+    },
+    {
+      "name": "ponytail-router",
+      "type": "execution_pipeline",
+      "description": "Sequential prompt-tail execution pipeline that enforces single-skill activation and auto-unloading.",
+      "config_path": ".antigravity/ponytail/skill_pipeline.yaml",
+      "status": "active"
+    },
+    {
+      "name": "instagram-vault-indexer",
+      "type": "intelligence_ingestor",
+      "description": "Extracts OpenGraph and caption intelligence from Instagram Reels and categorizes into vaults.",
+      "config_path": "AntiGravity Insta Links/",
+      "status": "active"
+    },
+    {
+      "name": "mcp-connector-suite",
+      "type": "developer_tooling",
+      "description": "Model Context Protocol tools and GitHub developer workflow automations extracted from reel repositories.",
+      "config_path": "AntiGravity Insta Links/02_skills_and_repos.md",
+      "status": "ready"
+    }
+  ]
+}
