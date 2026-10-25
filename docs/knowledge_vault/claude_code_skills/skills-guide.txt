@@ -1,0 +1,59 @@
+================================================================================
+                           CLAUDE CODE & AGENT SKILLS GUIDE
+================================================================================
+
+1. SKILLS KYA HAI? (WHAT ARE SKILLS?)
+--------------------------------------------------------------------------------
+Skills AI Agent (jaise Claude Code / Antigravity) ke modular instruction sets aur
+rulebooks hote hain, jo AI ko kisi specific domain (UI, Animation, Architecture)
+me expert banate hain.
+
+
+2. INKA USE (WHY & HOW TO USE):
+--------------------------------------------------------------------------------
+- Generic aur AI-slop (robotic/templated) output ko rokne ke liye.
+- Bina baar-baar lambe prompts likhe direct production-grade quality pane ke liye.
+- Established standards (palettes, typography, motion, accessibility) follow karne ke liye.
+
+
+3. "/" WALI SKILLS (SLASH COMMANDS - 1 LINE EXPLANATION):
+--------------------------------------------------------------------------------
+
+[ CORE AGENT WORKFLOWS ]
+* /plan                  : Bina koi code badle structured implementation plan aur architecture banata hai.
+* /build                 : Approved plan ke mutabiq direct code likhta hai, run karta hai aur test karta hai.
+* /ask                   : Code samjhane, review karne aur queries solve karne ke liye read-only mode hai.
+* /goal                  : Lambe aur complex tasks ko bina ruke autonoumously end tak execute karta hai.
+* /schedule              : Background me recurring automation jobs ya timers set karta hai.
+
+[ DESIGN & AESTHETICS SKILLS ]
+* /frontend-design       : Generic templates chhod kar unique, deliberate visual identity aur layout banata hai.
+* /landing-page-design   : High-converting SaaS landing pages, hero sections aur persuasive copy generate karta hai.
+* /tastemaker            : AI-generated visual cliches reject karke human-grade high-aesthetic standards enforce karta hai.
+* /apple-design          : Apple ke Human Interface Guidelines (HIG) ke mutabiq clean aur polished UI banata hai.
+* /dark-mode-design      : Balanced contrast aur semantic tokens ke sath proper dark mode theme design karta hai.
+
+[ UI CRAFT & POLISH (JAKUB KREHEL / OWL-LISTENER) ]
+* /better-ui             : Enter/exit transitions, micro-interactions aur premium card surfaces add karta hai.
+* /better-typography     : Professional font pairing, intentional scale aur responsive text hierarchy set karta hai.
+* /better-colors         : Semantic palettes, accessible contrast ratio aur harmonized color tokens banata hai.
+* /better-layout         : Clean visual hierarchy, consistent spacing grid aur adaptive layout generate karta hai.
+* /better-accessibility  : WCAG compliance, keyboard focus states aur screen-reader semantics fix karta hai.
+* /better-writing        : Interface me concise, user-focused labels, CTAs aur helpful error copy likhta hai.
+* /variant               : Kisi bhi UI component ke alag-alag creative variations aur design options banata hai.
+* /break                 : Extreme edge-cases, long strings aur weird screen sizes me UI ko stress-test karta hai.
+
+[ ANIMATION & INTERACTIONS (EMIL KOWALSKI) ]
+* /animate               : Web interfaces me smooth, physics-based spring animations aur motion recipes apply karta hai.
+* /animate-expo          : React Native aur Expo mobile apps ke liye 60fps native animations likhta hai.
+* /find-animation-opps   : UI me un jagahon ko dhoondhta hai jahan animations user experience ko behtar bana sakein.
+* /improve-animations    : Existing janky ya over-the-top animations ko subtle aur polished banata hai.
+* /review-animations     : Frame drops, heavy re-renders aur unnecessary layout thrashing audit karta hai.
+
+[ UX STRATEGY & TESTING ]
+* /heuristic-evaluation  : Usability ke 10 Nielsen heuristics ke tehat interface ko evaluate karta hai.
+* /user-flow-diagram     : User journey, decision steps aur error flows ka clear diagram/map banata hai.
+* /wireframe-spec        : Production code se pehle layout wireframe aur spacing specification tayyar karta hai.
+* /design-debt-audit     : Inconsistent components, spacing mismatches aur messy styles ka audit karta hai.
+
+================================================================================
