@@ -1,8 +1,8 @@
 {
   "project_name": "AntiGravity Instagram Intelligence & Skill Ingestion Engine",
-  "project_status": "vault_initialized",
+  "project_status": "anti_slop_and_claude_skills_integrated",
   "last_command": "/build",
-  "timestamp": "2026-10-24 23:34:50",
+  "timestamp": "2026-10-25 12:35:00",
   "links_stats": {
     "total_submitted": 78,
     "categorized": 78,
@@ -15,7 +15,27 @@
       "unresolved_links": 0
     }
   },
-  "active_tools": {
+  "knowledge_vault": {
+    "anti_ai_slop_modules": 12,
+    "claude_code_source_skills": 33,
+    "preserved_paths": [
+      "docs/knowledge_vault/anti_ai_slop_v2",
+      "docs/knowledge_vault/claude_code_skills",
+      "docs/knowledge_vault/CLAUDE_CODE_USAGE.md"
+    ]
+  },
+  "active_skills": {
+    "master_skill": "antigravity-agent",
+    "design_and_anti_slop": [
+      "tastemaker",
+      "break",
+      "variant",
+      "humanizer",
+      "apple-design",
+      "landing-page-design",
+      "animate",
+      "improve-animations"
+    ],
     "graphify_enabled": true,
     "ponytail_enabled": true
   },
@@ -26,7 +46,10 @@
     "graphify_node_mapping",
     "ponytail_pipeline_router",
     "project_plot_separation",
-    "manual_setup_guide_generation"
+    "manual_setup_guide_generation",
+    "anti_ai_slop_v2_integration",
+    "claude_code_skills_integration",
+    "knowledge_vault_preservation"
   ],
   "token_conservation": {
     "policy": "state_manifest_cache",

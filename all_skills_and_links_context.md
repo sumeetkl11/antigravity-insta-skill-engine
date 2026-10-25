@@ -1,7 +1,8 @@
-# 78 Instagram Reels: Complete Categorized Intelligence & Context Directory
+# 78 Instagram Reels + Anti-AI Slop v2 + Claude Code Skills: Complete Intelligence Directory
 
-> **Document Purpose**: Yeh document aapke 78 Instagram links mein maujood **saare AI skills, tools, GitHub repositories, aur UI techniques** ka clean directory reference hai.
-> **Execution Note**: Saari agent execution capabilities ab centralized ho chuki hain hamare master skill **[`antigravity-agent`](file:///d:/coedes/insta-vid-for-skill-reading-to-get-skill/skills/antigravity-agent/SKILL.md)** ke andar.
+> **Document Purpose**: Yeh document aapke 78 Instagram links, **Anti-AI Slop System (v2)**, aur **Claude Code Skills Suite** ka master directory reference hai.
+> **Knowledge Vault**: Dono source repositories ka pristine context future Claude Code portability ke liye **[`docs/knowledge_vault/`](file:///d:/coedes/insta-vid-for-skill-reading-to-get-skill/docs/knowledge_vault/)** mein preserve kar diya gaya hai.
+> **Execution Note**: Saari agent execution capabilities ab centralized ho chuki hain hamare master skill **[`antigravity-agent`](file:///d:/coedes/insta-vid-for-skill-reading-to-get-skill/skills/antigravity-agent/SKILL.md)** aur specialized skills (`/tastemaker`, `/break`, `/variant`, `/humanizer`, `/apple-design`, `/landing-page-design`) ke andar.
 
 ---
 
@@ -888,16 +889,22 @@ Is category mein total **15 reference reels** categorized hain:
 Yeh list un cheezon ki hai jo AI Agent khud kabhi nahi kar sakta aur jahan aapki **manual action** lazmi chahiye hoti hai:
 
 1. **Paid Cloud Accounts & Billing Information**:
-   - OpenAI, Anthropic, AWS, GCP ya kisi bhi third-party service par paid account register karna ya credit/debit card details enter karna.
+   - OpenAI, Anthropic, AWS, GCP, Context7 Pro, ya kisi bhi third-party service par paid account register karna ya payment details enter karna.
 
 2. **Private API Keys & Passwords Generation**:
-   - Aapki personal secret keys (GitHub Personal Access Token, Claude API Key, OpenAI API Key) AI khud create nahi kar sakta. Aapko apne dashboard se generate karke `.env` mein paste karni hoti hain.
+   - Aapki personal secret keys (GitHub Personal Access Token, Claude API Key, OpenAI API Key, Context7 API Key) AI khud create nahi kar sakta. Aapko apne dashboard se generate karke `.env` mein paste karni hoti hain.
 
-3. **Direct Live Production & Social Media Publishing**:
+3. **Local Headed Browser Binaries Installation**:
+   - MCP servers ka configuration humne `.agents/mcp_config.json` me set kar diya hai, lekin local system par Playwright ke real Chromium/WebKit browsers download karne ke liye terminal pe `npx playwright install` manually run karna padta hai.
+
+4. **Physical Audio Sound Files Creation**:
+   - Micro-interaction sound hooks (`use-sound`, `TactileButton`) ka code AI complete likh deta hai, lekin actual audio files (jaise `soft-click.mp3` ya `.ogg`) aapko apne target project ke `public/sounds/` folder me provide karni hoti hain.
+
+5. **Direct Live Production & Social Media Publishing**:
    - Aapke personal LinkedIn, Twitter ya live production domain par bina aapki final review aur manual approval ke direct post ya deployment publish karna allow nahi hai.
 
-4. **Bypassing CAPTCHAs & Hardware Security**:
+6. **Bypassing CAPTCHAs & Hardware Security**:
    - Interactive visual bot challenges (Cloudflare / Google reCAPTCHA), 2FA SMS verification codes, ya fingerprint/face-ID hardware authentications solve karna.
 
 ---
-*End of Directory. All autonomous capabilities are configured in [skills/antigravity-agent/SKILL.md](file:///d:/coedes/insta-vid-for-skill-reading-to-get-skill/skills/antigravity-agent/SKILL.md).*
+*End of Directory. All autonomous capabilities are configured in [skills/antigravity-agent/SKILL.md](file:///d:/coedes/insta-vid-for-skill-reading-to-get-skill/skills/antigravity-agent/SKILL.md) and [docs/knowledge_vault/](file:///d:/coedes/insta-vid-for-skill-reading-to-get-skill/docs/knowledge_vault/).*
