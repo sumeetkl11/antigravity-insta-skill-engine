@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "graph_type": "claude_workspace_dependencies",
+  "last_updated": "2026-10-25T09:21:44.758Z",
+  "nodes": {
+    "knowledge_vault": {
+      "path": "docs/knowledge_vault/",
+      "type": "intelligence_storage",
+      "dependencies": [],
+      "description": "Semantic categorization of 78 Instagram reels"
+    },
+    "project_plot": {
+      "path": "docs/project_plot.md",
+      "type": "architecture_document",
+      "dependencies": ["knowledge_vault"],
+      "description": "Master engineering architecture (no raw links)"
+    },
+    "state_manifest": {
+      "path": ".claude/state_manifest.json",
+      "type": "cache_controller",
+      "dependencies": ["knowledge_vault"],
+      "description": "Processing state & prompt cache metadata"
+    },
+    "graphify_system": {
+      "path": ".claude/graphify/",
+      "type": "dependency_mapper",
+      "dependencies": ["project_plot"],
+      "description": "1-hop node loading for token efficiency"
+    },
+    "ponytail_pipeline": {
+      "path": ".claude/ponytail/",
+      "type": "skill_executor",
+      "dependencies": ["graphify_system", "claude_skills"],
+      "description": "Sequential skill activation with YAGNI rules"
+    },
+    "claude_skills": {
+      "path": "skills/",
+      "type": "reusable_capabilities",
+      "dependencies": ["knowledge_vault"],
+      "description": "Token-optimizer, context-manager, vault-query, humanizer"
+    },
+    "manual_steps": {
+      "path": "docs/manual_setup_steps.md",
+      "type": "human_delegation",
+      "dependencies": [],
+      "description": "API keys, credentials, external services"
+    }
+  },
+  "edges": [
+    {"from": "knowledge_vault", "to": "project_plot", "type": "data_flow"},
+    {"from": "knowledge_vault", "to": "state_manifest", "type": "tracking"},
+    {"from": "project_plot", "to": "graphify_system", "type": "architecture"},
+    {"from": "graphify_system", "to": "ponytail_pipeline", "type": "dependency_resolution"},
+    {"from": "claude_skills", "to": "ponytail_pipeline", "type": "execution"},
+    {"from": "knowledge_vault", "to": "claude_skills", "type": "extraction"}
+  ],
+  "loading_strategy": {
+    "default": "1-hop-dependencies",
+    "max_depth": 2,
+    "cache_duration_minutes": 10
+  }
+}

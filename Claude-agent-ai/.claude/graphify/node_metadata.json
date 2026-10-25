@@ -1,0 +1,122 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-25T09:28:05.985Z",
+  "node_metadata": {
+    "knowledge_vault": {
+      "files": [
+        {
+          "path": "docs/knowledge_vault/01_antigravity_core.md",
+          "reels_count": 10,
+          "topics": ["vibe_coding", "token_optimization", "context_window", "system_prompts"],
+          "extracted_skills": ["vibe-coding-setup", "token-optimizer", "context-manager", "autonomous-loop"],
+          "size_estimate": "~12kb",
+          "cache_priority": "high"
+        },
+        {
+          "path": "docs/knowledge_vault/02_ai_agents_mcp.md",
+          "reels_count": 10,
+          "topics": ["mcp_protocol", "github_workflows", "free_ai_tools", "context_persistence"],
+          "extracted_skills": ["mcp-connector", "github-security", "design-system-loader", "context-capsule"],
+          "size_estimate": "~14kb",
+          "cache_priority": "high"
+        },
+        {
+          "path": "docs/knowledge_vault/03_workflow_automation.md",
+          "reels_count": 6,
+          "topics": ["agent_pipelines", "spec_driven_dev", "multi_step_workflows", "free_models"],
+          "extracted_skills": ["workflow-automator", "spec-generator", "social-content-pipeline", "approval-checkpoint"],
+          "size_estimate": "~10kb",
+          "cache_priority": "medium"
+        },
+        {
+          "path": "docs/knowledge_vault/04_ui_ux_design.md",
+          "reels_count": 37,
+          "topics": ["design_systems", "anti_ai_slop", "motion_graphics", "component_libraries", "10_ui_styles"],
+          "extracted_skills": ["design-system", "anti-slop-checker", "apple-design", "animation-library"],
+          "size_estimate": "~22kb",
+          "cache_priority": "high"
+        },
+        {
+          "path": "docs/knowledge_vault/05_dev_productivity.md",
+          "reels_count": 15,
+          "topics": ["security_audits", "token_tracking", "free_coding_agents", "network_optimization"],
+          "extracted_skills": ["security-auditor", "token-tracker", "network-optimizer", "pre-coding-docs"],
+          "size_estimate": "~13kb",
+          "cache_priority": "medium"
+        }
+      ],
+      "total_reels": 78,
+      "total_skills_extracted": 20,
+      "estimated_vault_size": "~71kb"
+    },
+    "skills": {
+      "claude-token-optimizer": {
+        "source_vault": "01_antigravity_core.md",
+        "trigger": "High token usage detected",
+        "dependencies": ["state_manifest"],
+        "implementation_status": "pending"
+      },
+      "claude-mcp-connector": {
+        "source_vault": "02_ai_agents_mcp.md",
+        "trigger": "External data query needed",
+        "dependencies": ["mcp_servers_config"],
+        "implementation_status": "pending"
+      },
+      "claude-anti-slop-checker": {
+        "source_vault": "04_ui_ux_design.md",
+        "trigger": "Before shipping any UI",
+        "dependencies": [],
+        "implementation_status": "pending"
+      },
+      "claude-security-auditor": {
+        "source_vault": "05_dev_productivity.md",
+        "trigger": "Pre-deployment",
+        "dependencies": [],
+        "implementation_status": "pending"
+      }
+    },
+    "external_references": {
+      "github_repos": [
+        "8-hour-startup-150-skills",
+        "github-spec-kit",
+        "3-must-know-vibe-coding-repos"
+      ],
+      "free_tools": [
+        "google-stitch",
+        "opal-automation",
+        "omniroute",
+        "claude-counter",
+        "caveman-compressor"
+      ],
+      "mcp_servers": [
+        "design-system-server",
+        "pinterest-api",
+        "higgsfield-motion",
+        "capsulehub-context"
+      ]
+    }
+  },
+  "loading_recommendations": {
+    "on_plan_trigger": [
+      "knowledge_vault (metadata only)",
+      "state_manifest",
+      "project_plot (if exists)"
+    ],
+    "on_build_trigger": [
+      "project_plot (full)",
+      "graphify_system",
+      "target_skill (1-hop dependencies only)"
+    ],
+    "on_resolve_trigger": [
+      "knowledge_vault/unresolved_links (if exists)",
+      "state_manifest (update mode)"
+    ]
+  },
+  "token_cost_estimates": {
+    "full_vault_load": "~39,000 tokens (first session only)",
+    "vault_metadata_load": "~500 tokens (cached sessions)",
+    "single_skill_load": "~500-3,000 tokens",
+    "1_hop_graphify_load": "~4,000-8,000 tokens",
+    "state_manifest_check": "~100 tokens"
+  }
+}

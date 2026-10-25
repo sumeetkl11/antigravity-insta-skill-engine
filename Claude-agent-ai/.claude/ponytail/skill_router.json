@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-25T09:22:16.883Z",
+  "routing_logic": {
+    "command_triggers": {
+      "/plan": {
+        "phase": "discovery",
+        "skills_sequence": ["vault-query", "intelligence-categorizer", "graphify-loader", "project-plot-generator"],
+        "output": "docs/project_plot.md + Senior Developer Report"
+      },
+      "/resolve": {
+        "phase": "manual_sync",
+        "skills_sequence": ["vault-query", "unresolved-link-merger"],
+        "input": "User-provided captions/notes",
+        "output": "Updated knowledge vault + state manifest"
+      },
+      "/build": {
+        "phase": "execution",
+        "skills_sequence": ["graphify-loader", "code-generator", "verification-runner"],
+        "prerequisite": "Approved project_plot.md must exist"
+      },
+      "/ask": {
+        "phase": "read_only",
+        "skills_sequence": ["vault-query"],
+        "constraint": "No file writes, no state changes"
+      }
+    },
+    "conditional_activation": {
+      "state_manifest_exists": {
+        "true": "Skip vault re-processing, use cached metadata",
+        "false": "Full intelligence ingestion required"
+      },
+      "unresolved_links_count_gt_0": {
+        "true": "Suggest /resolve command to user",
+        "false": "Proceed with standard workflow"
+      },
+      "context_window_usage_gt_80_percent": {
+        "true": "Trigger aggressive compaction, unload inactive skills",
+        "false": "Normal operation"
+      }
+    }
+  },
+  "skill_registry": {
+    "vault-query": {
+      "file": "skills/claude-vault-query/SKILL.md",
+      "trigger": "Any knowledge vault lookup",
+      "token_cost": "~500 tokens"
+    },
+    "intelligence-categorizer": {
+      "file": "skills/claude-intelligence-categorizer/SKILL.md",
+      "trigger": "Processing Instagram reels or external intelligence",
+      "token_cost": "~2000 tokens"
+    },
+    "graphify-loader": {
+      "file": "skills/claude-graphify-loader/SKILL.md",
+      "trigger": "Dependency mapping or 1-hop node loading",
+      "token_cost": "~800 tokens"
+    },
+    "project-plot-generator": {
+      "file": "skills/claude-project-plot-generator/SKILL.md",
+      "trigger": "/plan completion",
+      "token_cost": "~1500 tokens"
+    },
+    "code-generator": {
+      "file": "skills/claude-code-generator/SKILL.md",
+      "trigger": "/build execution",
+      "token_cost": "~3000 tokens"
+    },
+    "verification-runner": {
+      "file": "skills/claude-verification-runner/SKILL.md",
+      "trigger": "After code generation",
+      "token_cost": "~600 tokens"
+    }
+  }
+}

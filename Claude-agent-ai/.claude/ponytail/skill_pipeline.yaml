@@ -1,0 +1,74 @@
+ponytail_pipeline:
+  version: "1.0.0"
+  strategy: "minimal_token_chain"
+  last_updated: "2026-10-25T09:21:59.357Z"
+  
+  execution_phases:
+    - phase: "discovery"
+      trigger: "/plan"
+      skills:
+        - step: 1
+          skill: "vault-query"
+          action: "read_state_manifest"
+          rules: ["check_processed_status_first", "skip_if_cached"]
+        - step: 2
+          skill: "intelligence-categorizer"
+          action: "process_instagram_reels"
+          rules: ["extract_metadata_only", "update_manifest"]
+        - step: 3
+          skill: "graphify-loader"
+          action: "map_dependencies"
+          rules: ["1-hop-only", "generate_mermaid_diagram"]
+          
+    - phase: "architecture"
+      trigger: "/plan completion"
+      skills:
+        - step: 1
+          skill: "project-plot-generator"
+          action: "create_master_architecture"
+          rules: ["no_raw_urls", "pure_engineering_only"]
+        - step: 2
+          skill: "manual-delegator"
+          action: "identify_external_dependencies"
+          rules: ["numbered_steps", "exact_urls", "target_env_vars"]
+          
+    - phase: "execution"
+      trigger: "/build"
+      skills:
+        - step: 1
+          skill: "graphify-loader"
+          action: "load_target_node"
+          rules: ["read_only_target_and_edges"]
+        - step: 2
+          skill: "code-generator"
+          action: "execute_minimal_implementation"
+          rules: ["standard_library_first", "no_speculative_code", "yagni"]
+        - step: 3
+          skill: "verification-runner"
+          action: "verify_and_unload"
+          rules: ["run_syntax_check", "clear_skill_from_context"]
+          
+  optimization_rules:
+    yagni_enforcement:
+      - "Use standard library over external dependencies"
+      - "Write concise, modular functions"
+      - "No abstractions without concrete use cases"
+      - "Ship working code, not frameworks"
+      
+    token_conservation:
+      - "Load one skill at a time"
+      - "Unload after execution completes"
+      - "Query state manifest before every read"
+      - "Cache static architectural definitions"
+      
+    context_thresholds:
+      green_zone: "0-100k tokens (normal operation)"
+      yellow_zone: "100k-160k tokens (start pruning)"
+      red_zone: "160k+ tokens (aggressive compaction)"
+      
+  skill_lifecycle:
+    - load: "Read SKILL.md into context"
+    - execute: "Run skill instructions"
+    - verify: "Check output/syntax"
+    - unload: "Remove from active context"
+    - log: "Update execution_log with results"
